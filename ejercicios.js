@@ -173,7 +173,14 @@ function factorial(n) {
  */
 function sumaHastaN(n) {
   // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  return 0;
+  let i = 1;
+  let suma = 0;
+
+  while(i<=n){
+    suma += i;
+    i++;
+  }
+  return suma;
 }
 
 /**
