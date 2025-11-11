@@ -12,9 +12,7 @@
  * @returns {Object} - Objeto con nombre, edad y carrera
  */
 function miInformacion() {
-  // TODO: Declara las variables nombre, edad y carrera
-  // Ejemplo: const nombre = "Juan";
-  
+  // Declaración de constantes
   const nombre = "Ariff";
   const edad = 17;
   const carrera = "TSU en Desarrollo de Software";
@@ -29,8 +27,7 @@ function miInformacion() {
  * @returns {Object} - Objeto con suma, resta, multiplicaciÃ³n y divisiÃ³n
  */
 function operacionesBasicas(a, b) {
-  // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
-  
+  // Adición de el signo correspondiente
   const suma = a + b;
   const resta = a - b;
   const multiplicacion = a * b;
@@ -46,8 +43,7 @@ function operacionesBasicas(a, b) {
  * @returns {number} - Ãrea del rectÃ¡ngulo
  */
 function areaRectangulo(base, altura) {
-  // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return base*altura;
+  return base*altura; // Devuelve formula del área
 }
 
 /**
@@ -58,8 +54,7 @@ function areaRectangulo(base, altura) {
  * @returns {number} - Temperatura en Fahrenheit
  */
 function celsiusAFahrenheit(celsius) {
-  // TODO: Implementa la conversiÃ³n
-  const Fahrenheit = celsius * (9/5) + 32;
+  const Fahrenheit = celsius * (9/5) + 32; // Aplica la fórmula de conversión
   return Fahrenheit;
 }
 
@@ -73,10 +68,8 @@ function celsiusAFahrenheit(celsius) {
  * @returns {string} - "par" o "impar"
  */
 function parOImpar(numero) {
-  // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
-  // Pista: Un nÃºmero es par si numero % 2 === 0
   let paridad;
-  if (numero%2 == 0) {
+  if (numero%2 == 0) { // Determina si el numero es par o no
     paridad = "par";
   }
   else{
@@ -91,9 +84,8 @@ function parOImpar(numero) {
  * @returns {string} - "Aprobado" si nota >= 60, "Reprobado" si no
  */
 function evaluarNota(nota) {
-  // TODO: Implementa la lÃ³gica con if/else
     let estado;
-    if (nota>=60){
+    if (nota>=60){ // Determina si aprobó o no
       estado = "Aprobado"
     }
     else{
@@ -110,15 +102,14 @@ function evaluarNota(nota) {
  * @returns {number} - El nÃºmero mayor
  */
 function mayorDeTres(a, b, c) {
-  // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
   let mayor 
-  if (a >= b && a >= c) {
+  if (a >= b && a >= c) { // Determina si "a" es mayor que los demás
     mayor = a;
   } 
-  else if (b >= a && b >= c) {
+  else if (b >= a && b >= c) { // Determina si "b" es mayor que los demás
     mayor = b;
   } 
-  else {
+  else {  // Sino, entonces c es mayor
     mayor = c;
   }
   
@@ -132,14 +123,13 @@ function mayorDeTres(a, b, c) {
  * @returns {string} - "menor" (0-17), "adulto" (18-64), "mayor" (65+)
  */
 function clasificarEdad(edad) {
-  // TODO: Implementa la clasificaciÃ³n con if/else if/else
-    if (edad >= 0 && edad <= 17){
+    if (edad >= 0 && edad <= 17){ // Determina si es menor
       edad = "menor"
     }
-    else if (edad >= 18 && edad <= 64){
+    else if (edad >= 18 && edad <= 64){ // Determina si es adulto
       edad = "adulto"
     }
-    else {
+    else { // Sino, entonces es mayor
       edad = "mayor"
     }
   return edad;
@@ -158,9 +148,8 @@ function clasificarEdad(edad) {
  * @returns {number} - Factorial de n
  */
 function factorial(n) {
-  // TODO: Implementa usando un bucle for
   let resultado = 1;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i++) { // Iteración para multiplicar por el siguiente
     resultado *= i; 
   }
   return resultado;
@@ -172,11 +161,10 @@ function factorial(n) {
  * @returns {number} - Suma de 1 + 2 + 3 + ... + n
  */
 function sumaHastaN(n) {
-  // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
   let i = 1;
   let suma = 0;
 
-  while(i<=n){
+  while(i<=n){ // Iteración para sumar cada número hasta n
     suma += i;
     i++;
   }
@@ -190,11 +178,10 @@ function sumaHastaN(n) {
  * Ejemplo: tablaMultiplicar(3) debe retornar [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
  */
 function tablaMultiplicar(numero) {
-  // TODO: Genera un array con la tabla de multiplicar
   const tabla = [];
 
-  for (let i = 1; i <= 10; i++) {
-    tabla.push(numero * i);
+  for (let i = 1; i <= 10; i++) { 
+    tabla.push(numero * i); // Inserta la multiplicación correspondiente en el arreglo tabla
   }
   return tabla;
 }
@@ -206,9 +193,8 @@ function tablaMultiplicar(numero) {
  * Ejemplo: numerosPares(10) debe retornar [2, 4, 6, 8, 10]
  */
 function numerosPares(n) {
-  // TODO: Crea un array con todos los nÃºmeros pares hasta n
   const pares = [];
-  for (let i = 2; i <= n; i += 2) {
+  for (let i = 2; i <= n; i += 2) { // Avanza de 2 en 2 hasta n
     pares.push(i);
   }
   return pares;
@@ -224,9 +210,8 @@ function numerosPares(n) {
  * @returns {number} - Suma de todos los elementos
  */
 function sumaArray(numeros) {
-  // TODO: Suma todos los elementos del array
   let suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
+  for (let i = 0; i < numeros.length; i++) { // Ciclo para recorrer arreglo y sumar cada elemento
     suma += numeros[i];
   }
   return suma;
@@ -238,13 +223,12 @@ function sumaArray(numeros) {
  * @returns {number} - Promedio de los nÃºmeros
  */
 function promedioArray(numeros) {
-  // TODO: Calcula el promedio (suma total / cantidad de elementos)
   let suma = 0;
-  for (let i = 0; i < numeros.length; i++){
+  for (let i = 0; i < numeros.length; i++){ // Suma cada elemento
     suma += numeros[i];
   }
 
-  let promedio = suma / numeros.length;
+  let promedio = suma / numeros.length; // Obtiene el promedio con la longitud de el arreglo y la suma
   return promedio;
 }
 
